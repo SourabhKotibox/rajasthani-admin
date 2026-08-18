@@ -16,6 +16,7 @@ import About from './pages/public/About';
 import Contact from './pages/public/Contact';
 import Membership from './pages/public/Membership';
 import Gallery from './pages/public/Gallery';
+import GalleryAlbum from './pages/public/GalleryAlbum';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import AdminDashboard from './pages/admin/Dashboard';
@@ -80,6 +81,7 @@ function AppRoutes() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/membership" element={<Membership />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/:eventName" element={<GalleryAlbum />} />
           </Route>
 
           <Route element={<AuthLayout />}>

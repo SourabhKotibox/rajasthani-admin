@@ -4,7 +4,7 @@ import { api } from '@/api/client';
 import {
   Eye, EyeOff, Save, ChevronDown, ChevronUp, LayoutTemplate,
   Home, Info, Mail, Image as ImageIcon, Type, BarChart3,
-   Users, Clapperboard, Film, Zap, Upload, CheckCircle2, LayoutPanelLeft,
+   Users, Clapperboard, Film, Zap, Upload, CheckCircle2, LayoutPanelLeft, Trash2
 } from 'lucide-react';
 
 type PageKey = keyof CmsPages;
@@ -480,7 +480,7 @@ function SectionCard({
                     />
                     <button
                       type="button"
-                      onClick={() => fileInputRef.current?.click()}
+                      onClick={() => { if (fileInputRef.current) fileInputRef.current.value = ''; fileInputRef.current?.click(); }}
                       style={{
                         display: 'flex', alignItems: 'center', gap: '0.3rem',
                         padding: '0.5rem 0.75rem', borderRadius: '8px',
@@ -522,25 +522,95 @@ function SectionCard({
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     <button type="button" className="btn-outline btn-sm" style={{ width: 'fit-content' }} onClick={() => {
                       const members = (localData[field.key] as any[]) || [];
-                      setLocalData(p => ({ ...p, [field.key]: [...members, { name: '', role: '', photoUrl: '', order: members.length }] }));
+                      setLocalData(p => ({ ...p, [field.key]: [...members, { name: '', role: '', dob: '', photoUrl: '', details: '', order: members.length }] }));
                     }}>+ Add Member</button>
                     {((localData[field.key] as any[]) || []).map((m, idx) => (
-                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 2fr auto', gap: '0.5rem', padding: '0.5rem', border: '1px solid var(--color-border)', borderRadius: '6px' }}>
-                        <input className="field" placeholder="Name" value={m.name || ''} onChange={(e) => {
-                          const members = [...(localData[field.key] as any[])]; members[idx].name = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
-                        }} />
-                        <input className="field" placeholder="Role" value={m.role || ''} onChange={(e) => {
-                          const members = [...(localData[field.key] as any[])]; members[idx].role = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
-                        }} />
-                        <input className="field" placeholder="Photo URL" value={m.photoUrl || ''} onChange={(e) => {
-                          const members = [...(localData[field.key] as any[])]; members[idx].photoUrl = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
-                        }} />
-                        <input className="field" placeholder="Basic Details" value={m.details || ''} onChange={(e) => {
-                          const members = [...(localData[field.key] as any[])]; members[idx].details = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
-                        }} />
-                        <button type="button" className="btn-outline btn-sm" onClick={() => {
-                          const members = [...(localData[field.key] as any[])]; members.splice(idx, 1); setLocalData(p => ({ ...p, [field.key]: members }));
-                        }}>Remove</button>
+                      <div key={idx} style={{
+                        border: '1px solid var(--color-border)', borderRadius: '12px',
+                        background: 'var(--color-surface)', overflow: 'hidden',
+                      }}>
+                        {/* Member card header */}
+                        <div style={{
+                          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                          padding: '0.75rem 1rem', borderBottom: '1px solid var(--color-border)',
+                          background: 'var(--color-card)',
+                        }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                            {m.photoUrl ? (
+                              <img src={m.photoUrl} alt="" style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--color-border)' }} />
+                            ) : (
+                              <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--color-primary-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)' }}>
+                                <Users size={14} />
+                              </div>
+                            )}
+                            <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--color-foreground)' }}>
+                              {m.name || `Member ${idx + 1}`}
+                            </span>
+                            {m.role && <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--color-primary)', background: 'var(--color-primary-subtle)', padding: '1px 8px', borderRadius: '4px' }}>{m.role}</span>}
+                          </div>
+                          <button type="button" style={{
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            width: 28, height: 28, borderRadius: '6px', border: '1px solid #fecaca',
+                            background: '#fff5f5', color: '#dc2626', cursor: 'pointer',
+                          }} onClick={() => {
+                            const members = [...(localData[field.key] as any[])]; members.splice(idx, 1); setLocalData(p => ({ ...p, [field.key]: members }));
+                          }}>
+                            <Trash2 size={12} />
+                          </button>
+                        </div>
+                        {/* Member fields — 2 column grid */}
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1rem' }}>
+                          <div>
+                            <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: '0.3rem' }}>Name</label>
+                            <input className="field" style={{ width: '100%', fontSize: '0.82rem' }} placeholder="Full name" value={m.name || ''} onChange={(e) => {
+                              const members = [...(localData[field.key] as any[])]; members[idx].name = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
+                            }} />
+                          </div>
+                          <div>
+                            <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: '0.3rem' }}>Designation</label>
+                            <input className="field" style={{ width: '100%', fontSize: '0.82rem' }} placeholder="e.g. President" value={m.role || ''} onChange={(e) => {
+                              const members = [...(localData[field.key] as any[])]; members[idx].role = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
+                            }} />
+                          </div>
+                          <div>
+                            <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: '0.3rem' }}>Date of Birth</label>
+                            <input type="date" className="field" style={{ width: '100%', fontSize: '0.82rem' }} value={m.dob || ''} onChange={(e) => {
+                              const members = [...(localData[field.key] as any[])]; members[idx].dob = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
+                            }} />
+                          </div>
+                          <div>
+                            <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: '0.3rem' }}>Photo</label>
+                            <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+                              <input className="field" style={{ flex: 1, fontSize: '0.82rem' }} placeholder="Photo URL" value={m.photoUrl || ''} onChange={(e) => {
+                                const members = [...(localData[field.key] as any[])]; members[idx].photoUrl = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
+                              }} />
+                              <label style={{
+                                display: 'flex', alignItems: 'center', gap: '0.3rem',
+                                padding: '0.45rem 0.65rem', borderRadius: '6px',
+                                border: '1px solid var(--color-border)', background: 'var(--color-surface)',
+                                fontSize: '0.72rem', fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap' as const,
+                                color: 'var(--color-foreground)',
+                              }}>
+                                <Upload size={11} /> Upload
+                                <input type="file" hidden accept="image/*" onClick={(e) => { (e.target as HTMLInputElement).value = ''; }} onChange={async (e) => {
+                                  const file = e.target.files?.[0];
+                                  if (!file) return;
+                                  const fd = new FormData(); fd.append('file', file);
+                                  try {
+                                    const { url } = await api.upload(fd);
+                                    const members = [...(localData[field.key] as any[])]; members[idx].photoUrl = url; setLocalData(p => ({ ...p, [field.key]: members }));
+                                  } catch { alert('Upload failed'); }
+                                }} />
+                              </label>
+                            </div>
+                          </div>
+                          <div style={{ gridColumn: '1 / -1' }}>
+                            <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: '0.3rem' }}>About / Details</label>
+                            <textarea className="field" style={{ width: '100%', fontSize: '0.82rem', resize: 'vertical' }} rows={2} placeholder="Brief bio or description" value={m.details || ''} onChange={(e) => {
+                              const members = [...(localData[field.key] as any[])]; members[idx].details = e.target.value; setLocalData(p => ({ ...p, [field.key]: members }));
+                            }} />
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>

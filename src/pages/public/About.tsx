@@ -160,29 +160,33 @@ export default function About() {
             <div className="section-eyebrow" style={{ textAlign: 'center' }}>{aboutPagesData.team?.eyebrow || 'Our Committee'}</div>
             <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800 }}>{aboutPagesData.team?.title || 'Meet the Members'}</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+          <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-6 hide-scrollbar" style={{ margin: '0 -1.25rem', padding: '0 1.25rem' }}>
             {aboutPagesData.team?.members?.map((member: any, i: number) => (
-              <div key={i} className={`animate-slide-up stagger-${(i % 5) + 1}`} style={{ background: 'var(--color-card)', border: '1px solid var(--color-border)', borderRadius: '16px', overflow: 'hidden' }}>
-                <div style={{ padding: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'center', borderBottom: '1px solid var(--color-border)' }}>
-                  <div style={{ width: '80px', height: '80px', borderRadius: '50%', overflow: 'hidden', background: 'var(--color-surface)', flexShrink: 0 }}>
-                    {member.photoUrl ? (
-                      <img src={member.photoUrl} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    ) : (
-                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-muted-foreground)' }}>
-                        <Users size={32} />
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-foreground)', marginBottom: '0.2rem' }}>{member.name}</h3>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 600 }}>{member.role}</p>
-                  </div>
+              <div key={i} className={`snap-center flex-shrink-0 animate-slide-up stagger-${(i % 5) + 1} group`} style={{ width: '300px', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: '8px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ width: '100%', height: '200px', backgroundColor: 'var(--color-muted)' }}>
+                  {member.photoUrl ? (
+                    <img src={member.photoUrl} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ) : (
+                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-muted-foreground)' }}>
+                      <Users size={32} />
+                    </div>
+                  )}
                 </div>
-                {member.details && (
-                  <div style={{ padding: '1.5rem', fontSize: '0.9rem', color: 'var(--color-muted-foreground)', lineHeight: 1.6 }}>
-                    {member.details}
+                <div style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-foreground)', marginBottom: '0.25rem' }}>{member.name}</h3>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
+                    {member.role && <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--color-primary)', background: 'var(--color-primary-subtle)', padding: '0.1rem 0.5rem', borderRadius: '4px' }}>{member.role}</span>}
+                    {member.dob && <span style={{ fontSize: '0.8rem', fontWeight: 500, color: 'var(--color-muted-foreground)', border: '1px solid var(--color-border)', padding: '0.1rem 0.5rem', borderRadius: '4px' }}>DOB: {member.dob}</span>}
                   </div>
-                )}
+                  
+                  {member.details && (
+                    <div style={{ fontSize: '0.9rem', color: 'var(--color-muted-foreground)', lineHeight: 1.5, marginBottom: '1.5rem', flex: 1 }}>
+                      {member.details}
+                    </div>
+                  )}
+                  
+                  <button className="btn-primary w-full mt-auto" style={{ padding: '0.6rem', borderRadius: '6px' }}>View Profile</button>
+                </div>
               </div>
             ))}
           </div>
