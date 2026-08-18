@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { api } from '@/api/client';
 import { Plus, Edit2, Trash2, Image as ImageIcon } from 'lucide-react';
-import FileUploadModal from '@/components/FileUploadModal';
 
 export default function AdminGallery() {
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<any>({});
-  const [uploadModal, setUploadModal] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => { loadItems(); }, []);
   const loadItems = async () => { setLoading(true); try { setItems(await api.getGallery()); } finally { setLoading(false); } };
@@ -20,6 +19,16 @@ export default function AdminGallery() {
       setEditingId(null);
       loadItems();
     } catch (e) { alert('Save failed'); }
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const fd = new FormData(); fd.append('file', file);
+    try {
+      const { url } = await api.upload(fd);
+      setFormData({ ...formData, imageUrl: url });
+    } catch { alert('Upload failed'); }
   };
 
   const handleDelete = async (id: string) => {
@@ -72,10 +81,11 @@ export default function AdminGallery() {
               <div>
                 <label className="text-sm font-semibold mb-1 flex justify-between">
                   Image URL
-                  <button type="button" className="text-primary hover:underline flex items-center gap-1" onClick={() => setUploadModal(true)}>
+                  <button type="button" className="text-primary hover:underline flex items-center gap-1" onClick={() => fileRef.current?.click()}>
                     <ImageIcon size={14} /> Upload
                   </button>
                 </label>
+                <input type="file" ref={fileRef} hidden onChange={handleImageUpload} accept="image/*" />
                 <input className="field" value={formData.imageUrl || ''} onChange={e => setFormData({...formData, imageUrl: e.target.value})} />
                 {formData.imageUrl && <img src={formData.imageUrl} className="mt-2 w-full h-32 object-cover rounded" />}
               </div>
@@ -88,11 +98,6 @@ export default function AdminGallery() {
         </div>
       )}
 
-      <FileUploadModal
-        open={uploadModal}
-        onClose={() => setUploadModal(false)}
-        onUpload={(url) => { setFormData({ ...formData, imageUrl: url }); setUploadModal(false); }}
-      />
     </div>
   );
 }

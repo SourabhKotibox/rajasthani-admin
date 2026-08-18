@@ -15,9 +15,11 @@ import EventsList from './pages/public/EventsList';
 import About from './pages/public/About';
 import Contact from './pages/public/Contact';
 import Membership from './pages/public/Membership';
+import Gallery from './pages/public/Gallery';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import AdminDashboard from './pages/admin/Dashboard';
+import AdminGallery from './pages/admin/Gallery';
 import AdminUsers from './pages/admin/Users';
 import AdminProfiles from './pages/admin/Profiles';
 import AdminCasting from './pages/admin/Casting';
@@ -77,6 +79,7 @@ function AppRoutes() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/membership" element={<Membership />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Route>
 
           <Route element={<AuthLayout />}>
@@ -98,10 +101,12 @@ function AppRoutes() {
             <Route path="users" element={<AdminUsers />} />
             <Route path="profiles" element={<AdminProfiles />} />
             <Route path="portfolio" element={<AdminPortfolio />} />
+            <Route path="memberships" element={<AdminMemberships />} />
             <Route path="casting" element={<AdminCasting />} />
             <Route path="casting-banners" element={<AdminCastingBanners />} />
             <Route path="events" element={<AdminEvents />} />
             <Route path="applications" element={<AdminApplications />} />
+            <Route path="gallery" element={<AdminGallery />} />
             <Route path="inquiries" element={<AdminInquiries />} />
             <Route path="mail" element={<AdminMail />} />
             <Route path="notifications" element={<AdminNotifications />} />
@@ -110,7 +115,6 @@ function AppRoutes() {
             <Route path="cms" element={<AdminCMS />} />
             <Route path="testimonials" element={<AdminTestimonials />} />
             <Route path="categories" element={<AdminCategories />} />
-            <Route path="memberships" element={<AdminMemberships />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />

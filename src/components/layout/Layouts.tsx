@@ -5,7 +5,7 @@ import {
   Menu, X, LogOut, User, ChevronDown, Film, Tv, Music, Drama,
   LayoutDashboard, Settings, Briefcase, Star, BarChart3, MessageSquare,
   Users, Clapperboard, Bell, Search, ChevronRight, TrendingUp,
-  Shield, Zap, Home, Sparkles, PanelLeftClose, PanelLeftOpen, Mail, Check, LayoutTemplate, LayoutPanelLeft, Tag, UserCheck
+  Shield, Zap, Home, Sparkles, PanelLeftClose, PanelLeftOpen, Mail, Check, LayoutTemplate, LayoutPanelLeft, Tag, UserCheck, Image as ImageIcon
 } from 'lucide-react';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { WORK_TYPES } from '@/data/mock';
@@ -154,6 +154,7 @@ export function AdminLayout() {
       label: 'System',
       items: [
         { name: 'CMS / Pages', path: '/admin/cms', icon: <LayoutTemplate size={18} /> },
+        { name: 'Gallery', path: '/admin/gallery', icon: <ImageIcon size={18} /> },
         { name: 'Testimonials', path: '/admin/testimonials', icon: <Users size={18} /> },
         { name: 'Categories', path: '/admin/categories', icon: <Tag size={18} /> },
         { name: 'Subscriptions', path: '/admin/plans', icon: <Star size={18} /> },
@@ -476,6 +477,7 @@ function Navbar() {
            <NavLink to="/casting" label={navbar?.links?.castingLabel || 'Casting'} icon={<Clapperboard size={13} />} active={location.pathname.startsWith('/casting')} />
            <NavLink to="/event/all" label="Events" icon={<Sparkles size={13} />} active={location.pathname.startsWith('/event')} />
            <NavLink to="/about" label={navbar?.links?.aboutLabel || 'About'} active={location.pathname === '/about'} />
+          <NavLink to="/gallery" label="Gallery" active={location.pathname === '/gallery'} />
           <NavLink to="/contact" label={navbar?.links?.contactLabel || 'Contact'} active={location.pathname === '/contact'} />
         </nav>
         )}
@@ -574,6 +576,7 @@ function Navbar() {
             <MobileNavLink to="/casting" label={navbar?.links?.castingLabel || 'Casting'} icon={<Clapperboard size={16} />} />
             <MobileNavLink to="/event/all" label="Events" icon={<Sparkles size={16} />} />
             <MobileNavLink to="/about" label={navbar?.links?.aboutLabel || 'About'} />
+            <MobileNavLink to="/gallery" label="Gallery" />
             <MobileNavLink to="/contact" label={navbar?.links?.contactLabel || 'Contact'} />
           </div>
           )}
