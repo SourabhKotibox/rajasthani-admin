@@ -60,7 +60,7 @@ export default function TalentInbox() {
         <div>
           <h1 className="font-serif" style={{ fontSize: '1.75rem', fontWeight: 800 }}>My Inbox</h1>
           <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', marginTop: '0.25rem' }}>
-            Messages and communications from Rajasthani Cinema Association administration
+            Messages and communications from Rajasthan Cine Association administration
           </p>
         </div>
         <div style={{ display: 'flex', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: '8px', padding: '0.25rem' }}>

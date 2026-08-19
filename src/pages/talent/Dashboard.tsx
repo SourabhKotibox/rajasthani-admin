@@ -132,7 +132,7 @@ export default function TalentDashboard() {
             <span style={{ color:'#F5C842' }}>your stage awaits.</span>
           </h1>
           <p style={{ fontSize:'0.88rem', color:'rgba(255,255,255,0.5)', maxWidth:380, lineHeight:1.65 }}>
-            Manage your Rajasthani Cinema Association profile, showcase your credits, and apply to the latest casting calls — all in one place.
+            Manage your Rajasthan Cine Association profile, showcase your credits, and apply to the latest casting calls — all in one place.
           </p>
         </div>
 
@@ -346,7 +346,7 @@ export default function TalentDashboard() {
                 Complete your profile
               </h3>
               <p style={{ fontSize:'0.84rem', color:'var(--color-foreground)', opacity:0.75, lineHeight:1.6 }}>
-                Before you can add portfolio entries or apply for casting calls, you need to set up your Rajasthani Cinema Association professional profile.
+                Before you can add portfolio entries or apply for casting calls, you need to set up your Rajasthan Cine Association professional profile.
               </p>
             </div>
             <Link to="/dashboard/profile" className="btn-primary" style={{ alignSelf:'flex-start', padding:'0.7rem 1.4rem', borderRadius:'12px', fontSize:'0.88rem' }}>

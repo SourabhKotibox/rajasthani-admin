@@ -127,7 +127,7 @@ export default function Login() {
           marginBottom: '3rem', display: 'inline-block',
           transition: 'color 0.3s',
         }}>
-          Rajasthani Cinema Association
+          Rajasthan Cine Association
         </Link>
 
         {/* Headline */}
@@ -139,13 +139,13 @@ export default function Login() {
         }}>
           {isAdmin
             ? <>Secure <span style={{ color: '#4f9cf9' }}>admin</span><br />access.</>
-            : <>Welcome<br />back to <span style={{ color: '#F5C842' }}>Rajasthani Cinema Association.</span></>
+            : <>Welcome<br />back to <span style={{ color: '#F5C842' }}>Rajasthan Cine Association.</span></>
           }
         </h1>
         <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, maxWidth: '340px', marginBottom: '3rem' }}>
           {isAdmin
             ? 'Manage talent profiles, review applications and configure the platform from one secure console.'
-            : 'Sign in to update your portfolio, apply to open casting calls and manage your Rajasthani Cinema Association professional identity.'}
+            : 'Sign in to update your portfolio, apply to open casting calls and manage your Rajasthan Cine Association professional identity.'}
         </p>
 
         {/* Stats / trust badges */}
@@ -223,7 +223,7 @@ export default function Login() {
             <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)' }}>
               {isAdmin ? 'Restricted access — authorised personnel only.' : (
                 <>
-                  New to Rajasthani Cinema Association?{' '}
+                  New to Rajasthan Cine Association?{' '}
                   <Link to="/register" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>
                     Create your free ID →
                   </Link>
@@ -321,7 +321,7 @@ export default function Login() {
               }}
             >
               {loading ? <Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /> : <LogIn size={16} />}
-              {loading ? 'Signing in…' : isAdmin ? 'Access Admin Console' : 'Sign In to Rajasthani Cinema Association'}
+              {loading ? 'Signing in…' : isAdmin ? 'Access Admin Console' : 'Sign In to Rajasthan Cine Association'}
               {!loading && <ArrowRight size={15} />}
             </button>
           </form>

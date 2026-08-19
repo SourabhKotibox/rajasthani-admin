@@ -129,7 +129,7 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
         key: order.keyId || order.key_id,
         amount: order.amount,
         currency: order.currency || 'INR',
-        name: 'Rajasthani Cinema Association Platform',
+        name: 'Rajasthan Cine Association Platform',
         description: 'Account creation fee',
         order_id: order.id,
         prefill: { name, email, contact: phone },
@@ -191,7 +191,7 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
         key: order.keyId || order.key_id,
         amount: order.amount,
         currency: order.currency || 'INR',
-        name: 'Rajasthani Cinema Association Platform',
+        name: 'Rajasthan Cine Association Platform',
         description: `Application fee for ${call.projectTitle}`,
         order_id: order.id,
         prefill: { name, email, contact: phone },
@@ -407,14 +407,14 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
               <div>
                 <h3 className="font-serif" style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.25rem' }}>Pay Account Creation Fee</h3>
                 <p style={{ fontSize: '0.82rem', color: 'var(--color-muted-foreground)' }}>
-                  Create your Rajasthani Cinema Association talent account with a one-time fee of ₹ {ACCOUNT_FEE.toLocaleString()}.
+                  Create your Rajasthan Cine Association talent account with a one-time fee of ₹ {ACCOUNT_FEE.toLocaleString()}.
                 </p>
               </div>
 
               {/* Fee summary card */}
               <div style={{ background: 'var(--color-card)', border: '1px solid var(--color-border)', borderRadius: '14px', overflow: 'hidden' }}>
                 <div style={{ padding: '1rem' }}>
-                  <div className="font-serif" style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-foreground)', marginBottom: '0.75rem' }}>Rajasthani Cinema Association Talent Account</div>
+                  <div className="font-serif" style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-foreground)', marginBottom: '0.75rem' }}>Rajasthan Cine Association Talent Account</div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid var(--color-border)', paddingTop: '0.75rem' }}>
                     <span style={{ fontSize: '0.8rem', color: 'var(--color-muted-foreground)' }}>Account Creation Fee</span>
                     <span className="font-serif" style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--color-primary)' }}>
@@ -456,7 +456,7 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
           {step === 3 && (
             <form onSubmit={e => { e.preventDefault(); setStep(4); }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div>
-                <h3 className="font-serif" style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.25rem' }}>Create Your Rajasthani Cinema Association Account</h3>
+                <h3 className="font-serif" style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.25rem' }}>Create Your Rajasthan Cine Association Account</h3>
                 <p style={{ fontSize: '0.82rem', color: 'var(--color-muted-foreground)' }}>
                   {accountPaymentId ? '✓ Account payment received. ' : ''}Set a password to secure your talent profile.
                 </p>
@@ -497,7 +497,7 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
                   </button>
                 </div>
                 <p style={{ fontSize: '0.72rem', color: 'var(--color-muted-foreground)', marginTop: '0.35rem' }}>
-                  You'll use this to log in to your Rajasthani Cinema Association dashboard.
+                  You'll use this to log in to your Rajasthan Cine Association dashboard.
                 </p>
               </div>
 
@@ -649,7 +649,7 @@ export default function CastingApplyFlow({ call, onClose }: Props) {
                 {accountPaymentId && <> Account payment (ID: <code style={{ fontSize: '0.75rem' }}>{accountPaymentId.slice(0, 16)}…</code>) recorded.</>}
                 {hasApplicationFee && applicationPaymentId && <> Application payment (ID: <code style={{ fontSize: '0.75rem' }}>{applicationPaymentId.slice(0, 16)}…</code>) recorded.</>}
                 <br /><br />
-                Your Rajasthani Cinema Association talent account is ready — log in to track your application status.
+                Your Rajasthan Cine Association talent account is ready — log in to track your application status.
               </p>
               <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <button onClick={() => { window.location.href = '/dashboard'; }} className="btn-primary btn-sm">

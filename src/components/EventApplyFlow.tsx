@@ -212,7 +212,7 @@ export default function EventApplyFlow({ event, onClose }: Props) {
           {step === 2 && (
             <form onSubmit={e => { e.preventDefault(); setStep('done'); }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div>
-                <h3 className="font-serif" style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.25rem' }}>Create Your Rajasthani Cinema Association Account</h3>
+                <h3 className="font-serif" style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.25rem' }}>Create Your Rajasthan Cine Association Account</h3>
                 <p style={{ fontSize: '0.82rem', color: 'var(--color-muted-foreground)' }}>
                   Set a password to secure your talent profile and track your application.
                 </p>
@@ -244,7 +244,7 @@ export default function EventApplyFlow({ event, onClose }: Props) {
                   </button>
                 </div>
                 <p style={{ fontSize: '0.72rem', color: 'var(--color-muted-foreground)', marginTop: '0.35rem' }}>
-                  You'll use this to log in to your Rajasthani Cinema Association dashboard.
+                  You'll use this to log in to your Rajasthan Cine Association dashboard.
                 </p>
               </div>
 
@@ -269,7 +269,7 @@ export default function EventApplyFlow({ event, onClose }: Props) {
               <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', lineHeight: 1.7, marginBottom: '1.5rem', maxWidth: '380px', margin: '0 auto 1.5rem' }}>
                 Your application for <strong style={{ color: 'var(--color-foreground)' }}>{event.title}</strong> has been received.
                 <br /><br />
-                Your Rajasthani Cinema Association talent account is ready — log in to track your application status.
+                Your Rajasthan Cine Association talent account is ready — log in to track your application status.
               </p>
               <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <button onClick={() => { window.location.href = '/dashboard'; }} className="btn-primary btn-sm">

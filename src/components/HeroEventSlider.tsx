@@ -106,14 +106,14 @@ export default function HeroEventSlider({ heroData }: { heroData?: Record<string
 
       {/* Content */}
       <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '6rem 1.25rem 4rem', width: '100%' }}>
-        <div className="animate-slide-up" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(250,147,26,0.25)', border: '1px solid rgba(250,147,26,0.4)', borderRadius: '99px', padding: '0.3rem 0.9rem', marginBottom: '1.5rem' }}>
-          <Sparkles size={12} style={{ color: '#F5C842' }} />
-          <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F5C842' }}>
+        <div className="animate-slide-up" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'rgba(250,147,26,0.3)', border: '1px solid rgba(250,147,26,0.7)', borderRadius: '99px', padding: '0.6rem 1.5rem', marginBottom: '1.75rem' }}>
+          <Sparkles size={20} style={{ color: '#F5C842' }} />
+          <span style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#F5C842' }}>
             {String(heroData?.eyebrow || event.eventType)}
           </span>
         </div>
 
-        <h1 className="font-serif animate-slide-up stagger-1" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em', maxWidth: '800px' }}>
+        <h1 className="font-serif animate-slide-up stagger-1" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em', maxWidth: '800px', textShadow: '0 2px 20px rgba(0,0,0,0.6)' }}>
           {event.title}
         </h1>
 

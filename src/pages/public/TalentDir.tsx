@@ -51,13 +51,13 @@ export default function TalentDir() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
             <Users size={14} style={{ color: 'var(--color-primary)' }} />
-            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Curated by Rajasthani Cinema Association</span>
+            <span className="section-eyebrow" style={{ marginBottom: 0 }}>Curated by Rajasthan Cine Association</span>
           </div>
           <h1 className="font-serif" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: 'var(--color-foreground)', marginBottom: '0.5rem' }}>
             Talent/Members Directory
           </h1>
           <p style={{ color: 'var(--color-muted-foreground)', marginBottom: '2rem', fontSize: '0.95rem' }}>
-            Featured professionals and members hand-picked by the Rajasthani Cinema Association team.
+            Featured professionals and members hand-picked by the Rajasthan Cine Association team.
           </p>
 
           {/* Search + Filter row */}

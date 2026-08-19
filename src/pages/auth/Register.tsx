@@ -90,7 +90,7 @@ export default function Register() {
             key: order.keyId || 'dummy_key',
             amount: order.amount,
             currency: order.currency,
-            name: 'Rajasthani Cinema Association',
+            name: 'Rajasthan Cine Association',
             description: 'Registration & Membership Fee',
             order_id: order.id,
             handler: async (response: any) => {
@@ -169,7 +169,7 @@ export default function Register() {
         ))}
 
         <Link to="/" className="font-serif" style={{ fontSize: '2.4rem', fontWeight: 800, color: '#F5C842', textDecoration: 'none', letterSpacing: '-0.02em', marginBottom: '3rem', display: 'inline-block' }}>
-          Rajasthani Cinema Association
+          Rajasthan Cine Association
         </Link>
 
         <h1 className="font-serif" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#FFFFFF', lineHeight: 1.15, marginBottom: '1rem', letterSpacing: '-0.02em' }}>
@@ -216,7 +216,7 @@ export default function Register() {
               <Star size={12} /> Registration Fee: ₹1000
             </div>
             <h2 className="font-serif" style={{ fontSize: '1.8rem', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--color-foreground)', lineHeight: 1.1, marginBottom: '0.5rem' }}>
-              Create your Rajasthani Cinema Association ID
+              Create your Rajasthan Cine Association ID
             </h2>
             <p style={{ fontSize: '0.88rem', color: 'var(--color-muted-foreground)', lineHeight: 1.6 }}>
               Already a member?{' '}
@@ -421,7 +421,7 @@ export default function Register() {
               style={{ width: '100%', justifyContent: 'center', padding: '0.9rem', fontSize: '0.95rem', borderRadius: '14px', fontWeight: 700, opacity: loading ? 0.7 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}
             >
               {loading ? <Loader2 size={17} style={{ animation: 'spin 1s linear infinite' }} /> : null}
-              {loading ? 'Creating your ID…' : <><span>Create My Rajasthani Cinema Association ID</span> <ArrowRight size={17} /></>}
+              {loading ? 'Creating your ID…' : <><span>Create My Rajasthan Cine Association ID</span> <ArrowRight size={17} /></>}
             </button>
           </form>
 

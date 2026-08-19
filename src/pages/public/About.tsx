@@ -53,7 +53,7 @@ export default function About() {
           {heroData.title || 'Empowering Cinema Professionals'}
         </h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-muted-foreground)', lineHeight: 1.6, marginBottom: '2.5rem', whiteSpace: 'pre-wrap' }}>
-          {heroData.subtitle || "The Rajasthani Cinema Association is the premier community and professional network for talent and creators."}
+          {heroData.subtitle || "The Rajasthan Cine Association is the premier community and professional network for talent and creators."}
         </p>
         <Link to="/register" className="btn-primary">{heroData.primaryCtaText || 'Join the Association'}</Link>
       </section>
@@ -74,35 +74,35 @@ export default function About() {
         <section style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.25rem 6rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="section-eyebrow" style={{ textAlign: 'center' }}>{valuesData.eyebrow || 'Why Join'}</div>
-            <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800 }}>{valuesData.title || 'The Rajasthani Cinema Association Advantage'}</h2>
+            <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800 }}>{valuesData.title || 'The Rajasthan Cine Association Advantage'}</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             <div className="animate-slide-up stagger-1">
             <ValueProp
               icon={<Users size={20} />}
               title={valuesData.val1Title || "Verified Community"}
-              desc={valuesData.val1Desc || "Every profile on the platform is verified by our team. Studios trust Rajasthani Cinema Association talent because they know they are hiring real professionals."}
+              desc={valuesData.val1Desc || "Every profile on the platform is verified by our team. Studios trust Rajasthan Cine Association talent because they know they are hiring real professionals."}
             />
           </div>
           <div className="animate-slide-up stagger-2">
             <ValueProp
               icon={<Shield size={20} />}
               title={valuesData.val2Title || "Admin-Mediated Introductions"}
-              desc={valuesData.val2Desc || "Rajasthani Cinema Association's team personally reviews every inquiry from industry. Your contact details are never publicly exposed — shared only at your discretion."}
+              desc={valuesData.val2Desc || "Rajasthan Cine Association's team personally reviews every inquiry from industry. Your contact details are never publicly exposed — shared only at your discretion."}
             />
           </div>
           <div className="animate-slide-up stagger-3">
             <ValueProp
               icon={<Clapperboard size={20} />}
               title={valuesData.val3Title || "Real Casting Opportunities"}
-              desc={valuesData.val3Desc || "Browse open roles for productions posted directly through Rajasthani Cinema Association. Apply with your portfolio auto-attached."}
+              desc={valuesData.val3Desc || "Browse open roles for productions posted directly through Rajasthan Cine Association. Apply with your portfolio auto-attached."}
             />
           </div>
           <div className="animate-slide-up stagger-4">
             <ValueProp
               icon={<Sparkles size={20} />}
               title={valuesData.val4Title || "Curated Visibility"}
-              desc={valuesData.val4Desc || "Rajasthani Cinema Association's editorial team hand-picks which profiles appear publicly. Quality over quantity — industry knows every featured profile is vetted."}
+              desc={valuesData.val4Desc || "Rajasthan Cine Association's editorial team hand-picks which profiles appear publicly. Quality over quantity — industry knows every featured profile is vetted."}
             />
           </div>
           </div>
@@ -197,13 +197,13 @@ export default function About() {
       {homeCtaData.visible !== false && (
       <section style={{ padding: '5rem 1.25rem', textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
         <h2 className="font-serif" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, marginBottom: '1rem' }}>
-          {homeCtaData.title || 'Ready to Join Rajasthani Cinema Association?'}
+          {homeCtaData.title || 'Ready to Join Rajasthan Cine Association?'}
         </h2>
         <p style={{ color: 'var(--color-muted-foreground)', marginBottom: '2rem', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>
-          {homeCtaData.subtitle || "Whether you're a veteran director or an emerging actor, Rajasthani Cinema Association is your professional home. Build your ID, showcase your credits, and get discovered by India's top productions."}
+          {homeCtaData.subtitle || "Whether you're a veteran director or an emerging actor, Rajasthan Cine Association is your professional home. Build your ID, showcase your credits, and get discovered by India's top productions."}
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-          <Link to={homeCtaData.ctaLink || "/register"} className="btn-primary">{homeCtaData.ctaText || 'Create Your Rajasthani Cinema Association ID'}</Link>
+          <Link to={homeCtaData.ctaLink || "/register"} className="btn-primary">{homeCtaData.ctaText || 'Create Your Rajasthan Cine Association ID'}</Link>
           <Link to="/contact" className="btn-outline">{homeCtaData.secondaryCtaText || 'Get in Touch'}</Link>
         </div>
       </section>

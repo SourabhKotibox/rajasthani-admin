@@ -120,7 +120,7 @@ export default function TalentProfile() {
                 </button>
                 {sent && (
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--color-success)', fontWeight: 600 }}>
-                    <CheckCircle size={14} /> Inquiry sent to Rajasthani Cinema Association admin
+                    <CheckCircle size={14} /> Inquiry sent to Rajasthan Cine Association admin
                   </div>
                 )}
               </div>

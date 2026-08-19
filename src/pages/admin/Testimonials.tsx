@@ -239,7 +239,7 @@ export default function AdminTestimonials() {
             <form onSubmit={onAddSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', paddingBottom: '1rem' }}>
               <div>
                 <label className="field-label">Quote</label>
-                <textarea name="quote" rows={3} required className="field" placeholder="What they said about Rajasthani Cinema Association..." />
+                <textarea name="quote" rows={3} required className="field" placeholder="What they said about Rajasthan Cine Association..." />
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>

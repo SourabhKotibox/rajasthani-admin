@@ -105,7 +105,7 @@ export default function TalentProfileEdit() {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.75rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <h1 className="font-serif" style={{ fontSize: '1.75rem', fontWeight: 800 }}>My Profile</h1>
-          <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', marginTop: '0.25rem' }}>Your public Rajasthani Cinema Association professional identity</p>
+          <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', marginTop: '0.25rem' }}>Your public Rajasthan Cine Association professional identity</p>
         </div>
         
         {/* Completion Bar */}

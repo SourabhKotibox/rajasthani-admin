@@ -80,7 +80,7 @@ export default function Membership() {
         key: (order as any).keyId || 'dummy_key',
         amount: (order as any).amount,
         currency: (order as any).currency,
-        name: branding.platformName || 'Rajasthani Cinema Association',
+        name: branding.platformName || 'Rajasthan Cine Association',
         description: 'Membership Registration Fee',
         order_id: (order as any).id,
         handler: async (response: any) => {
@@ -135,7 +135,7 @@ export default function Membership() {
     return (
       <div className="animate-fade-in" style={{ padding: '6rem 1.25rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
         <CheckCircle size={60} style={{ color: 'var(--color-success)', margin: '0 auto 1.5rem' }} />
-        <h1 className="font-serif" style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Welcome to {branding.platformName || 'Rajasthani Cinema Association'}!</h1>
+        <h1 className="font-serif" style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Welcome to {branding.platformName || 'Rajasthan Cine Association'}!</h1>
         <p style={{ color: 'var(--color-muted-foreground)', marginBottom: '3rem', fontSize: '1.1rem' }}>
           Your payment of ₹1000 was successful. Below is your official membership card.
         </p>

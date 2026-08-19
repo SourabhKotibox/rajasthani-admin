@@ -95,7 +95,7 @@ export default function AdminSettings() {
   const handleReset = () => {
     dispatch(resetBranding());
     setLocalBrand({
-      platformName: 'Rajasthani Cinema Association',
+      platformName: 'Rajasthan Cine Association',
       tagline: 'Cinema Association',
       logoUrl: '',
       faviconUrl: '',
@@ -189,7 +189,7 @@ export default function AdminSettings() {
                 <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
                   <div>
                     <label className="field-label">Platform Name</label>
-                    <input className="field" value={localBrand.platformName} onChange={e => setLocalBrand({ ...localBrand, platformName: e.target.value })} placeholder="e.g. Rajasthani Cinema Association" />
+                    <input className="field" value={localBrand.platformName} onChange={e => setLocalBrand({ ...localBrand, platformName: e.target.value })} placeholder="e.g. Rajasthan Cine Association" />
                   </div>
                   <div>
                     <label className="field-label">Tagline</label>
@@ -426,7 +426,7 @@ export default function AdminSettings() {
                   </div>
                   <div>
                     <label className="field-label">From Name</label>
-                    <input className="field" placeholder="Rajasthani Cinema Association" value={localSmtp.fromName} onChange={e => setLocalSmtp({ ...localSmtp, fromName: e.target.value })} />
+                    <input className="field" placeholder="Rajasthan Cine Association" value={localSmtp.fromName} onChange={e => setLocalSmtp({ ...localSmtp, fromName: e.target.value })} />
                   </div>
                 </div>
 

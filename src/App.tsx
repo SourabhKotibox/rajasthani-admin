@@ -52,7 +52,7 @@ function AppRoutes() {
   if (!ready) {
     return (
       <div className="min-h-dvh flex items-center justify-center bg-background text-foreground">
-        <p className="text-muted-foreground">Loading Rajasthani Cinema Association…</p>
+        <p className="text-muted-foreground">Loading Rajasthan Cine Association…</p>
       </div>
     );
   }

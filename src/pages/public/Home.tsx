@@ -648,7 +648,7 @@ export default function Home() {
   };
 
   useSEO({
-    title: homePagesData.seo?.title as string || 'Rajasthani Cinema Association — India\'s Premier Cinema Association',
+    title: homePagesData.seo?.title as string || 'Rajasthan Cine Association — India\'s Premier Cinema Association',
     description: homePagesData.seo?.description as string || 'Discover and connect with top film, TV, and commercial talent across Rajasthan and India.',
     keywords: homePagesData.seo?.keywords as string || 'talent, casting, actors, models, Rajasthan, India, film, television',
     ogImage: homePagesData.seo?.ogImage as string || 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&auto=format&fit=crop',
@@ -672,7 +672,7 @@ export default function Home() {
           <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.25rem' }}>
             <div className="animate-slide-up" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2rem', gap: '1rem', flexWrap: 'wrap' }}>
               <div>
-                <div className="section-eyebrow">{featuredData.eyebrow || 'Curated by Rajasthani Cinema Association'}</div>
+                <div className="section-eyebrow">{featuredData.eyebrow || 'Curated by Rajasthan Cine Association'}</div>
                 <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', fontWeight: 800, color: 'var(--color-foreground)' }}>
                   {featuredData.title || 'Featured Talent'}
                 </h2>
@@ -703,17 +703,17 @@ export default function Home() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.25rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="section-eyebrow" style={{ textAlign: 'center' }}>{howItWorksData.eyebrow || 'Simple process'}</div>
-            <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', fontWeight: 800, color: 'var(--color-foreground)' }}>{howItWorksData.title || 'How Rajasthani Cinema Association Works'}</h2>
+            <h2 className="font-serif" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', fontWeight: 800, color: 'var(--color-foreground)' }}>{howItWorksData.title || 'How Rajasthan Cine Association Works'}</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2.5rem' }}>
             <div className="animate-slide-up stagger-1">
               <HowItWorksStep step="01" title={howItWorksData.step1Title || "Register & Build Your ID"} desc={howItWorksData.step1Desc || "Sign up as a talent professional, fill out your profile, and build your structured portfolio of credits."} />
             </div>
             <div className="animate-slide-up stagger-2">
-              <HowItWorksStep step="02" title={howItWorksData.step2Title || "Subscribe to Go Live"} desc={howItWorksData.step2Desc || "Choose a plan that fits your career stage. Once active, Rajasthani Cinema Association's team reviews and can feature your profile."} />
+              <HowItWorksStep step="02" title={howItWorksData.step2Title || "Subscribe to Go Live"} desc={howItWorksData.step2Desc || "Choose a plan that fits your career stage. Once active, Rajasthan Cine Association's team reviews and can feature your profile."} />
             </div>
             <div className="animate-slide-up stagger-3">
-              <HowItWorksStep step="03" title={howItWorksData.step3Title || "Get Discovered"} desc={howItWorksData.step3Desc || "Industry professionals browse featured talent and submit inquiries through Rajasthani Cinema Association — who mediates every introduction."} />
+              <HowItWorksStep step="03" title={howItWorksData.step3Title || "Get Discovered"} desc={howItWorksData.step3Desc || "Industry professionals browse featured talent and submit inquiries through Rajasthan Cine Association — who mediates every introduction."} />
             </div>
             <div className="animate-slide-up stagger-4">
               <HowItWorksStep step="04" title={howItWorksData.step4Title || "Apply to Casting"} desc={howItWorksData.step4Desc || "Browse open casting calls and apply with your portfolio auto-attached. Only a small fee per application."} />
@@ -782,24 +782,24 @@ export default function Home() {
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              background: 'rgba(245, 200, 66, 0.15)',
-              border: '1px solid rgba(245, 200, 66, 0.3)',
+              gap: '0.75rem',
+              background: 'rgba(250,147,26,0.3)',
+              border: '1px solid rgba(250,147,26,0.7)',
               borderRadius: '99px',
-              padding: '0.4rem 1rem',
-              marginBottom: '1.5rem',
+              padding: '0.6rem 1.5rem',
+              marginBottom: '1.75rem',
             }}>
-              <Star size={14} style={{ color: '#F5C842' }} />
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F5C842' }}>
-                Join Rajasthani Cinema Association
+              <Star size={20} style={{ color: '#F5C842' }} />
+              <span style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#F5C842' }}>
+                Join Rajasthan Cine Association
               </span>
             </div>
 
-            <h2 className="font-serif" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.1, marginBottom: '1.25rem' }}>
-              {ctaData.title || 'Ready to Build Your Rajasthani Cinema Association ID?'}
+            <h2 className="font-serif" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.1, marginBottom: '1.25rem', textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
+              {ctaData.title || 'Ready to Build Your Rajasthan Cine Association ID?'}
             </h2>
 
-            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, maxWidth: '600px', margin: '0 auto 2rem', whiteSpace: 'pre-wrap' }}>
+            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, maxWidth: '600px', margin: '0 auto 2rem', whiteSpace: 'pre-wrap' }}>
               {ctaData.subtitle || "Join Rajasthan's most curated entertainment talent platform. Build your credit portfolio and get discovered by industry decision-makers."}
             </p>
 

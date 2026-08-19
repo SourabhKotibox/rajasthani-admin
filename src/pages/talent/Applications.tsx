@@ -36,7 +36,7 @@ export default function Applications() {
           <Activity size={40} style={{ margin: '0 auto 1rem', opacity: 0.35, color: 'var(--color-muted-foreground)' }} />
           <h2 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>No applications yet</h2>
           <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', marginBottom: '1.5rem', maxWidth: '360px', margin: '0 auto 1.5rem' }}>
-            Find open casting calls for movies, TV series, and music videos. Apply directly with your Rajasthani Cinema Association portfolio.
+            Find open casting calls for movies, TV series, and music videos. Apply directly with your Rajasthan Cine Association portfolio.
           </p>
           <Link to="/casting" className="btn-outline btn-sm">
             View Casting Board

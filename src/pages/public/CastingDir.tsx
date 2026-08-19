@@ -32,7 +32,7 @@ export default function CastingDir() {
             Casting Board
           </h1>
           <p style={{ color: 'var(--color-muted-foreground)', marginBottom: '2rem', maxWidth: '560px', fontSize: '0.95rem' }}>
-            Open roles for movies, TV series, music videos, and short dramas. Apply with your Rajasthani Cinema Association portfolio.
+            Open roles for movies, TV series, music videos, and short dramas. Apply with your Rajasthan Cine Association portfolio.
           </p>
 
           {/* Type filter pills */}

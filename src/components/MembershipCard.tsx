@@ -57,7 +57,7 @@ export function MembershipCard({ membership, branding }: MembershipCardProps) {
         )}
         <div>
           <div style={{ fontWeight: 800, color: 'var(--color-primary)', fontSize: '1.1rem', letterSpacing: '0.05em' }}>
-            {branding.platformName || 'Rajasthani Cinema Association'}
+            {branding.platformName || 'Rajasthan Cine Association'}
           </div>
           <div style={{ fontSize: '0.75rem', color: 'var(--color-foreground)', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
             Official Member

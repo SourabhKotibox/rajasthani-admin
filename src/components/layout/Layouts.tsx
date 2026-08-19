@@ -542,7 +542,7 @@ function Navbar() {
               <Link to="/login" className="rca-auth-login-btn">{navbar?.auth?.loginLabel || 'Log in'}</Link>
               <Link to="/register" className="btn-primary btn-sm">
                 <Zap size={13} />
-                {navbar?.auth?.joinLabel || 'Join Rajasthani Cinema Association'}
+                {navbar?.auth?.joinLabel || 'Join Rajasthan Cine Association'}
               </Link>
             </>
           )}
@@ -596,7 +596,7 @@ function Navbar() {
               <>
                 <Link to="/login" className="btn-outline" style={{ justifyContent: 'center' }}>{navbar?.auth?.loginLabel || 'Log in'}</Link>
                 <Link to="/register" className="btn-primary" style={{ justifyContent: 'center' }}>
-                  <Zap size={13} /> {navbar?.auth?.joinLabel || 'Join Rajasthani Cinema Association'}
+                  <Zap size={13} /> {navbar?.auth?.joinLabel || 'Join Rajasthan Cine Association'}
                 </Link>
               </>
             )}
@@ -637,7 +637,7 @@ function MobileNavLink({ to, label, icon, indent }: { to: string; label: string;
 function Footer() {
   const footer = useAppSelector((s) => s.pages?.footer);
 
-  const tickerArray = footer?.ticker?.text ? footer.ticker.text.split(',').map((s: string) => s.trim()) : ['Movies', 'TV Series', 'Music Videos', 'Short Dramas', 'Actors', 'Directors', 'Cinematographers', 'Editors', 'Writers', 'Producers', 'Indian Talent', 'Casting Calls', 'Rajasthani Cinema Association Platform'];
+  const tickerArray = footer?.ticker?.text ? footer.ticker.text.split(',').map((s: string) => s.trim()) : ['Movies', 'TV Series', 'Music Videos', 'Short Dramas', 'Actors', 'Directors', 'Cinematographers', 'Editors', 'Writers', 'Producers', 'Indian Talent', 'Casting Calls', 'Rajasthan Cine Association Platform'];
   const brandSub = footer?.brand?.subtitle || 'Professional home for Indian entertainment talent — movies, TV, music videos, and short dramas.';
   const col1 = footer?.columns?.col1Title || 'Talent';
   const col2 = footer?.columns?.col2Title || 'Works';
@@ -663,12 +663,12 @@ function Footer() {
         {/* Brand */}
         {footer?.brand?.visible !== false && (
         <div>
-          <div className="font-serif" style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--color-primary)', letterSpacing: '-0.02em' }}>Rajasthani Cinema Association</div>
+          <div className="font-serif" style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-primary)', letterSpacing: '-0.02em' }}>Rajasthan Cine Association</div>
           <p style={{ marginTop: '0.75rem', fontSize: '0.85rem', color: 'var(--color-muted-foreground)', lineHeight: 1.65, maxWidth: '240px' }}>
             {brandSub}
           </p>
           <div style={{ marginTop: '1.2rem', fontSize: '0.78rem', color: 'var(--color-muted-foreground)' }}>
-            © {new Date().getFullYear()} Rajasthani Cinema Association. All rights reserved.
+            © {new Date().getFullYear()} Rajasthan Cine Association. All rights reserved.
           </div>
         </div>
         )}
@@ -702,7 +702,7 @@ function Footer() {
             <div>
               <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-muted-foreground)', marginBottom: '1rem' }}>{col3}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
-                <FooterLink to="/about" label="About Rajasthani Cinema Association" />
+                <FooterLink to="/about" label="About Rajasthan Cine Association" />
                 <FooterLink to="/contact" label="Contact Us" />
                 <FooterLink to="/casting" label="Open Casting" />
               </div>

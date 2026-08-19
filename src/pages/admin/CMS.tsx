@@ -28,7 +28,7 @@ const PAGE_SECTIONS: Record<string, SectionDef[]> = {
       label: 'Homepage SEO',
       icon: <LayoutTemplate size={16} />,
       fields: [
-        { key: 'title', label: 'Page Title', type: 'text', placeholder: 'Rajasthani Cinema Association — India\'s Premier Cinema Association' },
+        { key: 'title', label: 'Page Title', type: 'text', placeholder: 'Rajasthan Cine Association — India\'s Premier Cinema Association' },
         { key: 'description', label: 'Meta Description', type: 'textarea', placeholder: 'Discover and connect with top film, TV, and commercial talent across Rajasthan and India.' },
         { key: 'keywords', label: 'Meta Keywords', type: 'text', placeholder: 'talent, casting, actors, models, Rajasthan, India, film, television' },
         { key: 'ogImage', label: 'Social Share Image URL', type: 'image', placeholder: 'https://...' },
@@ -70,7 +70,7 @@ const PAGE_SECTIONS: Record<string, SectionDef[]> = {
       label: 'Featured Talent Section',
       icon: <Users size={16} />,
       fields: [
-        { key: 'eyebrow', label: 'Eyebrow Label', type: 'text', placeholder: 'Rajasthani Cinema Association Verified' },
+        { key: 'eyebrow', label: 'Eyebrow Label', type: 'text', placeholder: 'Rajasthan Cine Association Verified' },
         { key: 'title', label: 'Section Title', type: 'text', placeholder: 'Featured Talent' },
         { key: 'viewAllText', label: 'View All Text', type: 'text' },
       ],

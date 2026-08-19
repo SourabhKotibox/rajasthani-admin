@@ -124,7 +124,7 @@ export default function CastingDetail() {
                 <CheckCircle size={22} style={{ color: 'var(--color-success)', flexShrink: 0 }} />
                 <div>
                   <p style={{ fontWeight: 700, color: 'var(--color-success)', marginBottom: '0.2rem' }}>Application submitted!</p>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-success)' }}>UI demo — no payment gateway connected. Rajasthani Cinema Association admin will review your application.</p>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-success)' }}>UI demo — no payment gateway connected. Rajasthan Cine Association admin will review your application.</p>
                 </div>
               </div>
             ) : (

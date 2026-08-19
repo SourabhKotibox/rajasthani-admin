@@ -1,4 +1,4 @@
-# Rajasthani Cinema Association
+# Rajasthan Cine Association
 
 Standalone React UI — **React + React Router DOM + Redux**. No backend. Uses **npm**.
 

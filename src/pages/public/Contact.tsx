@@ -41,7 +41,7 @@ export default function Contact() {
           <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
             <div className="section-eyebrow">{heroData.eyebrow || 'Get in touch'}</div>
             <h1 className="font-serif" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, marginBottom: '0.5rem' }}>
-              {heroData.title || 'Contact Rajasthani Cinema Association'}
+              {heroData.title || 'Contact Rajasthan Cine Association'}
             </h1>
             <p style={{ color: 'var(--color-muted-foreground)', fontSize: '0.95rem', whiteSpace: 'pre-wrap' }}>
               {heroData.subtitle || 'General inquiries for press, partners, and industry professionals.'}
@@ -112,7 +112,7 @@ export default function Contact() {
               <div>
                 <h3 className="font-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-success)', marginBottom: '0.5rem' }}>Message Received!</h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-success)' }}>
-                  Thanks for reaching out. Rajasthani Cinema Association's team will review your message and get back to you.
+                  Thanks for reaching out. Rajasthan Cine Association's team will review your message and get back to you.
                 </p>
               </div>
               <button className="btn-outline btn-sm" onClick={() => setSent(false)}>Send another message</button>

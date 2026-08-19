@@ -368,7 +368,7 @@ const dataSlice = createSlice({
 const seedNotifications: RcaNotification[] = [
   {
     id: 1,
-    title: 'Welcome to Rajasthani Cinema Association Platform!',
+    title: 'Welcome to Rajasthan Cine Association Platform!',
     message: 'We\'re excited to have you on board. Complete your profile to get discovered by top productions.',
     type: 'success',
     priority: 'normal',
@@ -445,9 +445,9 @@ const notificationsSlice = createSlice({
 const seedMessages: RcaMessage[] = [
   {
     id: 1,
-    subject: 'Welcome to Rajasthani Cinema Association — Get Started Guide',
-    body: `Dear Talent,\n\nWelcome to Rajasthani Cinema Association — India's premier home for film, TV, music, and drama professionals.\n\nHere's how to get started:\n1. Complete your talent profile with a professional photo and bio\n2. Add your portfolio entries (past projects)\n3. Browse and apply to casting calls\n4. Subscribe to a plan to unlock featured listing\n\nWe're excited to help you connect with top productions across the region.\n\nBest regards,\nThe Rajasthani Cinema Association Team`,
-    senderName: 'Rajasthani Cinema Association Admin',
+    subject: 'Welcome to Rajasthan Cine Association — Get Started Guide',
+    body: `Dear Talent,\n\nWelcome to Rajasthan Cine Association — India's premier home for film, TV, music, and drama professionals.\n\nHere's how to get started:\n1. Complete your talent profile with a professional photo and bio\n2. Add your portfolio entries (past projects)\n3. Browse and apply to casting calls\n4. Subscribe to a plan to unlock featured listing\n\nWe're excited to help you connect with top productions across the region.\n\nBest regards,\nThe Rajasthan Cine Association Team`,
+    senderName: 'Rajasthan Cine Association Admin',
     senderEmail: 'admin@rajasthaniacinema.org',
     toUserId: 'talent',
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString(),
@@ -499,7 +499,7 @@ const messagesSlice = createSlice({
 const brandingSlice = createSlice({
   name: 'branding',
   initialState: {
-    platformName: 'Rajasthani Cinema Association',
+    platformName: 'Rajasthan Cine Association',
     tagline: 'Cinema Association',
     logoUrl: '',
     faviconUrl: '',
@@ -516,7 +516,7 @@ const brandingSlice = createSlice({
     },
     resetBranding() {
       return {
-        platformName: 'Rajasthani Cinema Association',
+        platformName: 'Rajasthan Cine Association',
         tagline: 'Cinema Association',
         logoUrl: '',
         faviconUrl: '',
